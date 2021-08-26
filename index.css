@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+
+
+.Card {
+    background-color: white;
+    
+    max-width: 55em;
+    width: auto;
+    min-height: 25em;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+.Bg img:first-child{
+    max-width: 80%;
+    position: absolute;
+    top: -11rem;
+    left: -20rem;
+    
+}
+
+.Bg img:last-child{
+    max-width: 45%;
+    position: absolute;
+    top: 2rem;
+    left: -5rem;
+   
+}
+
+.faq  {
+    font-family: 'Kumbh Sans';
+    margin-top: 3rem;
+    margin-left: 27rem;
+    margin-right: 30px;
+    
+}
+
+.faq .titleFaq {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.faq .questions {
+    display: flex;
+   flex-direction: column;
+
+   margin-top: 20px;
+}
+
+.faq .questions > div {
+    position: relative;
+
+    
+    
+}
+
+.faq .questions > div::after {
+    content: "";
+    background-color:  hsl(240, 5%, 91%);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+}
+
+
+.faq .questions > div label{
+    font-weight: 400;
+    font-size: 0.813rem;
+    margin-bottom: 5px;
+    outline: none;
+    padding: 10px 0;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox:checked + .questions1 label::after{
+    transform: rotate(180deg);
+}
+
+.checkbox:checked + .questions1 label {
+    font-weight: 700;
+    line-height: 5px;
+    
+}
+.checkbox:checked + .questions1 p {
+    display: block;
+}
+
+
+.faq .questions > div label::after{
+   content: url(./images/icon-arrow-down.svg);
+   margin-left: 2.5rem;
+   float: right;
+}
+
+.faq .questions > div p{
+    font-weight: 400;
+    font-size: 0.80rem;
+    max-width: 200px;
+    margin-top: 5px;
+    user-select: none;
+    display: none;
+}
+
+
+.faq .questions > div{
+    padding: 5px 0px;
+}
+
+@media (max-width: 600px) {
+
+    .Bg img:first-child{
+        max-width: 80%;
+        position: absolute;
+        top: -140px;
+        left: 30px;
+        
+        
+    }
+
+    .Card {
+        max-width: 20em;
+        height: auto;
+        overflow: visible;
+        position: relative;
+        
+    }
+
+    
+
+    .faq  {
+        margin-left: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .faq .titleFaq {
+        text-transform: uppercase;
+        font-size: 25px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+
+  }
